@@ -2,11 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class HudFunctions : MonoBehaviour
 {
     public PlayerInfos player1;
     public PlayerInfos player2;
+
+    public GameObject winnerMessage;
+    public TextMeshProUGUI winnerText;
 
     public TextMeshProUGUI player1Name;
     public TextMeshProUGUI player1Life;
@@ -28,9 +32,20 @@ public class HudFunctions : MonoBehaviour
         player2Name.text = player2.nickname;
         player2Life.text = "Vida : " + player2.life.ToString();
         player2Damage.text = "Ataque : " + player2.damage.ToString();
-        player2Move.text = "Movimentos : " + player2.moves.ToString();
+        player2Move.text = "Movimentos : " + player2.moves.ToString();  
     }
 
+    public void ChangeScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
+    public void ResetStatus()
+    {
+        player1.life = player1.maxLife;
+        player1.damage = player1.maxDamage;
+        player2.life = player2.maxLife;
+        player2.damage = player2.maxDamage;
+    }
     public void TurnPass()
     {
         if (player1.turn && !player2.turn)
@@ -50,6 +65,20 @@ public class HudFunctions : MonoBehaviour
             player1.moves = 3;
             player1.turn = true;
             player1.alreadyAttacked = false;
+        }
+    }
+    
+    public void CheckWinner()
+    {
+        if (player1.life <= 0)
+        {
+            winnerMessage.SetActive(true);
+            winnerText.text = player2.nickname + " venceu!";
+        }
+        if (player2.life <= 0)
+        {
+            winnerMessage.SetActive(true);
+            winnerText.text = player1.nickname + " venceu!";
         }
     }
 }

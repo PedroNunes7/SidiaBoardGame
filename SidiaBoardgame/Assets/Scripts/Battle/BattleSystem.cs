@@ -6,6 +6,7 @@ using TMPro;
 
 public class BattleSystem : MonoBehaviour
 {
+    public AudioSource punchSound;
     public PlayerInfos player1;
     public PlayerInfos player2;
 
@@ -82,6 +83,7 @@ public class BattleSystem : MonoBehaviour
         OrganizeDices();
         CompareResults();
         ShowDices();
+        punchSound.Play();
         if (battlesWonPlayer1 > battlesWonPlayer2)
         {
             player2.life -= player1.damage;

@@ -7,6 +7,7 @@ public class Collectable : MonoBehaviour
     public PlayerInfos player1;
     public PlayerInfos player2;
     public CollectableCounter counter;
+    public AudioClip coinSound;
 
     [SerializeField]
     bool healthCollectable = false;
@@ -25,6 +26,7 @@ public class Collectable : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
+            
             #region Player 1 variables
 
             if (player1.turn)
@@ -69,7 +71,7 @@ public class Collectable : MonoBehaviour
             #endregion
 
             counter.remainingCollectables--;
-
+            AudioSource.PlayClipAtPoint(coinSound, transform.position);
             Destroy(this.gameObject);
         }
     }

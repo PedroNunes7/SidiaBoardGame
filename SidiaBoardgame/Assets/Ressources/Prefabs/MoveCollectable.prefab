@@ -112,6 +112,7 @@ MonoBehaviour:
   player1: {fileID: 11400000, guid: 780ec020dcde7f545bcba9ae030f212e, type: 2}
   player2: {fileID: 11400000, guid: 3c5a2ded49f719145a66fdbf5c51b019, type: 2}
   counter: {fileID: 11400000, guid: 036c24e42403a204daca88534a2c4083, type: 2}
+  coinSound: {fileID: 8300000, guid: 77958c500a418184fa3f1e62f90ec30a, type: 3}
   healthCollectable: 0
   damageCollectable: 0
   moveCollectable: 1

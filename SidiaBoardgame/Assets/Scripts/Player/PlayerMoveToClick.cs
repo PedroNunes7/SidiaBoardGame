@@ -11,6 +11,7 @@ public class PlayerMoveToClick : MonoBehaviour
     public MapManagement map;
     public CollectableCounter counter;
     public GameObject battleButton;
+    public AudioSource walkSound;
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -31,6 +32,7 @@ public class PlayerMoveToClick : MonoBehaviour
                         agent.destination = hit.transform.position;
                         player.moves--;
                         hit.transform.gameObject.GetComponent<Tile>().collectable = false;
+                        walkSound.Play();
                         AssignPosition(hit.transform.gameObject.GetComponent<Tile>());
                     }
                     if (hit.transform.gameObject.GetComponent<Tile>().attackable)
