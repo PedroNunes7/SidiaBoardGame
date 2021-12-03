@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2243542706612557849
+--- !u!1 &5495245687688176179
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,11 +8,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7905721929628466013}
-  - component: {fileID: 7420894192944749733}
-  - component: {fileID: 3852805549396422683}
-  - component: {fileID: 8388581245608713774}
-  - component: {fileID: 5201325960881278673}
+  - component: {fileID: 5495245687688176334}
+  - component: {fileID: 5495245687688176335}
+  - component: {fileID: 5495245687688176332}
+  - component: {fileID: 5495245687688176333}
+  - component: {fileID: 5495245687688176178}
   m_Layer: 0
   m_Name: MoveCollectable
   m_TagString: Untagged
@@ -20,35 +20,35 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7905721929628466013
+--- !u!4 &5495245687688176334
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2243542706612557849}
+  m_GameObject: {fileID: 5495245687688176179}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.7, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &7420894192944749733
+--- !u!33 &5495245687688176335
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2243542706612557849}
+  m_GameObject: {fileID: 5495245687688176179}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &3852805549396422683
+--- !u!23 &5495245687688176332
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2243542706612557849}
+  m_GameObject: {fileID: 5495245687688176179}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1f3ea44660da66f4cbe2b34930f18f37, type: 2}
+  - {fileID: 2100000, guid: 3c40e9049e4a6f44c9516797f0f7d0c5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -84,34 +84,34 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8388581245608713774
+--- !u!65 &5495245687688176333
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2243542706612557849}
+  m_GameObject: {fileID: 5495245687688176179}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5201325960881278673
+--- !u!114 &5495245687688176178
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2243542706612557849}
+  m_GameObject: {fileID: 5495245687688176179}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab3e730be54473245ba5f3f7a7fb0684, type: 3}
+  m_Script: {fileID: 11500000, guid: c0cb14fdf38ec434f9f0985f7d6677b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player1: {fileID: 11400000, guid: 91aba9980b41e7d41a5107423daf2099, type: 2}
-  player2: {fileID: 11400000, guid: 6fa3af13ac67e244f8e02cdb622f49ca, type: 2}
-  counter: {fileID: 11400000, guid: 2c3bdfe222899c8459c790f711ba2508, type: 2}
+  player1: {fileID: 11400000, guid: 780ec020dcde7f545bcba9ae030f212e, type: 2}
+  player2: {fileID: 11400000, guid: 3c5a2ded49f719145a66fdbf5c51b019, type: 2}
+  counter: {fileID: 11400000, guid: 036c24e42403a204daca88534a2c4083, type: 2}
   healthCollectable: 0
   damageCollectable: 0
   moveCollectable: 1

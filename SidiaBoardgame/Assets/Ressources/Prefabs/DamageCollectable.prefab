@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &718171907063739512
+--- !u!1 &7906363062222637631
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,11 +8,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3213418929006578404}
-  - component: {fileID: 2530300048071970643}
-  - component: {fileID: 4203588063781501846}
-  - component: {fileID: 4855524833609978996}
-  - component: {fileID: 4763918896231796000}
+  - component: {fileID: 7014624142903209280}
+  - component: {fileID: 817825857574792750}
+  - component: {fileID: 8519179129623294498}
+  - component: {fileID: 6954311307130798569}
+  - component: {fileID: 7547034847603442722}
   m_Layer: 0
   m_Name: DamageCollectable
   m_TagString: Untagged
@@ -20,35 +20,35 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3213418929006578404
+--- !u!4 &7014624142903209280
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 718171907063739512}
+  m_GameObject: {fileID: 7906363062222637631}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.7, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &2530300048071970643
+--- !u!33 &817825857574792750
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 718171907063739512}
+  m_GameObject: {fileID: 7906363062222637631}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &4203588063781501846
+--- !u!23 &8519179129623294498
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 718171907063739512}
+  m_GameObject: {fileID: 7906363062222637631}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1f3ea44660da66f4cbe2b34930f18f37, type: 2}
+  - {fileID: 2100000, guid: 3c40e9049e4a6f44c9516797f0f7d0c5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -84,35 +84,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &4855524833609978996
+--- !u!136 &6954311307130798569
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 718171907063739512}
+  m_GameObject: {fileID: 7906363062222637631}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
+  m_Radius: 1
+  m_Height: 1
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!114 &4763918896231796000
+--- !u!114 &7547034847603442722
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 718171907063739512}
+  m_GameObject: {fileID: 7906363062222637631}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab3e730be54473245ba5f3f7a7fb0684, type: 3}
+  m_Script: {fileID: 11500000, guid: c0cb14fdf38ec434f9f0985f7d6677b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player1: {fileID: 11400000, guid: 91aba9980b41e7d41a5107423daf2099, type: 2}
-  player2: {fileID: 11400000, guid: 6fa3af13ac67e244f8e02cdb622f49ca, type: 2}
-  counter: {fileID: 11400000, guid: 2c3bdfe222899c8459c790f711ba2508, type: 2}
+  player1: {fileID: 11400000, guid: 780ec020dcde7f545bcba9ae030f212e, type: 2}
+  player2: {fileID: 11400000, guid: 3c5a2ded49f719145a66fdbf5c51b019, type: 2}
+  counter: {fileID: 11400000, guid: 036c24e42403a204daca88534a2c4083, type: 2}
   healthCollectable: 0
   damageCollectable: 1
   moveCollectable: 0

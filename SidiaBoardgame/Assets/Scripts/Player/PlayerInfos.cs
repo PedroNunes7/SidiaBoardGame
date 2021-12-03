@@ -11,4 +11,5 @@ public class PlayerInfos : ScriptableObject
     public bool turn = false;
     public int dices = 3;
     public int moves = 3;
+    public bool alreadyAttacked = false;
 }

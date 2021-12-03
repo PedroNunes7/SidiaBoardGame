@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6867479315544453626
+--- !u!1 &2670488050998651968
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,47 +8,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 595873808355696135}
-  - component: {fileID: 8674076447437303045}
-  - component: {fileID: 8304297953671512763}
-  - component: {fileID: 6417753201316463530}
-  - component: {fileID: 3023144495720701881}
-  m_Layer: 0
-  m_Name: HealthCollectable
-  m_TagString: Untagged
+  - component: {fileID: 2670488050998651971}
+  - component: {fileID: 2670488050998651972}
+  - component: {fileID: 2670488050998651973}
+  - component: {fileID: 2670488050998651970}
+  - component: {fileID: 2670488050998651975}
+  m_Layer: 3
+  m_Name: Tile
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
---- !u!4 &595873808355696135
+--- !u!4 &2670488050998651971
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6867479315544453626}
+  m_GameObject: {fileID: 2670488050998651968}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &8674076447437303045
+--- !u!33 &2670488050998651972
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6867479315544453626}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &8304297953671512763
+  m_GameObject: {fileID: 2670488050998651968}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &2670488050998651973
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6867479315544453626}
+  m_GameObject: {fileID: 2670488050998651968}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1f3ea44660da66f4cbe2b34930f18f37, type: 2}
+  - {fileID: 2100000, guid: fb652e595c870774c8327cfacdbfb167, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -84,37 +84,34 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &6417753201316463530
-SphereCollider:
+--- !u!65 &2670488050998651970
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6867479315544453626}
+  m_GameObject: {fileID: 2670488050998651968}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3023144495720701881
+--- !u!114 &2670488050998651975
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6867479315544453626}
+  m_GameObject: {fileID: 2670488050998651968}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab3e730be54473245ba5f3f7a7fb0684, type: 3}
+  m_Script: {fileID: 11500000, guid: ea13f312235eee14cb8801942af63b39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player1: {fileID: 11400000, guid: 91aba9980b41e7d41a5107423daf2099, type: 2}
-  player2: {fileID: 11400000, guid: 6fa3af13ac67e244f8e02cdb622f49ca, type: 2}
-  counter: {fileID: 11400000, guid: 2c3bdfe222899c8459c790f711ba2508, type: 2}
-  healthCollectable: 1
-  damageCollectable: 0
-  moveCollectable: 0
-  common: 0
-  rare: 0
-  epic: 0
+  counter: {fileID: 11400000, guid: 036c24e42403a204daca88534a2c4083, type: 2}
+  colletables:
+  - {fileID: 7906363062222637631, guid: 6983c6f9df1b550418f1c05cfa75c1ea, type: 3}
+  - {fileID: 7250471002509468344, guid: 5d109509beba05e408e7bcd5a11099d9, type: 3}
+  - {fileID: 5495245687688176179, guid: 149e225d6085de343a37251f20c2ee87, type: 3}
+  moveable: 0

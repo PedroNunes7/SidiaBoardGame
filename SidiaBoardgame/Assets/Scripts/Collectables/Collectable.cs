@@ -23,7 +23,7 @@ public class Collectable : MonoBehaviour
     bool epic = false;
     public void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if(other.gameObject.tag == "Player")
         {
             #region Player 1 variables
 
@@ -110,7 +110,7 @@ public class Collectable : MonoBehaviour
             common = true;
         if (tier >= 13 && tier <= 18)
             rare = true;
-        if (tier >= 19)
+        if (tier >=19)
             epic = true;
     }
 
@@ -133,4 +133,5 @@ public class Collectable : MonoBehaviour
         RandomizeTier();
         ColoringByTier();
     }
+     
 }

@@ -24,4 +24,5 @@ public class CharacterCard : MonoBehaviour
         player.damage = character.damage;
         player.maxDamage = character.damage;
     }
+
 }

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44e0e4413aa6c04449514b502bfa0044, type: 3}
+  m_Name: Map Management
+  m_EditorClassIdentifier: 
+  player1Tile: 0100000001000000
+  player2Tile: 0100000002000000
+  collectables:
+  - {fileID: 7250471002509468344, guid: 5d109509beba05e408e7bcd5a11099d9, type: 3}
+  - {fileID: 7906363062222637631, guid: 6983c6f9df1b550418f1c05cfa75c1ea, type: 3}
+  - {fileID: 5495245687688176179, guid: 149e225d6085de343a37251f20c2ee87, type: 3}

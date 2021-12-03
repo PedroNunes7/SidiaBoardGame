@@ -5,13 +5,12 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 using TMPro;
-
 public class MenuController : MonoBehaviour
 {
     public AudioMixer audioMixer;
     public Dropdown resolutionDropdown;
     Resolution[] resolutions;
-
+   
     public PlayerInfos player1;
     public PlayerInfos player2;
 
@@ -19,7 +18,7 @@ public class MenuController : MonoBehaviour
     {
         resolutions = Screen.resolutions;
         resolutionDropdown.ClearOptions();
-
+        
         List<string> resolutionOptions = new List<string>();
         int currentResolutionIndex = 0;
         for (int i = 0; i < resolutions.Length; i++)
@@ -33,7 +32,7 @@ public class MenuController : MonoBehaviour
                 currentResolutionIndex = i;
             }
         }
-
+        
         resolutionDropdown.AddOptions(resolutionOptions);
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
@@ -52,34 +51,33 @@ public class MenuController : MonoBehaviour
     #endregion
 
     #region Audio Settings
-    public void SongSlider(float volume)
-    {
-        audioMixer.SetFloat("songVolume", volume);
-    }
-
-    public void EffectSlider(float volume)
-    {
-        audioMixer.SetFloat("effectsVolume", volume);
-    }
-    
     public void MasterSlider(float volume)
     {
         audioMixer.SetFloat("masterVolume", volume);
     }
+    public void SongSlider (float volume)
+    {
+        audioMixer.SetFloat("songVolume", volume);
+    }
+
+    public void EffectSlider (float volume)
+    {
+        audioMixer.SetFloat("effectsVolume", volume);
+    }
     #endregion
 
     #region Video Settings
-    public void GraphicsDropdown(int graphicIndex)
+    public void GraphicsDropdown (int graphicIndex)
     {
         QualitySettings.SetQualityLevel(graphicIndex);
     }
 
-    public void FullscreenToggle(bool isFullscreen)
+    public void FullscreenToggle (bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
     }
 
-    public void ResolutionSettings(int resolutionIndex)
+    public void ResolutionSettings (int resolutionIndex)
     {
         Resolution resolution = resolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
@@ -101,10 +99,10 @@ public class MenuController : MonoBehaviour
     {
         if (player1.nickname == "")
             player1.nickname = "Jogador 1";
-
+        
         if (player2.nickname == "")
             player2.nickname = "Jogador 2";
-
+        
         if (player1.life == 0)
         {
             player1.life = 12;
@@ -112,7 +110,7 @@ public class MenuController : MonoBehaviour
             player1.damage = 2;
             player2.maxDamage = 2;
         }
-
+        
         if (player2.life == 0)
         {
             player2.life = 12;

@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a086f5fe2115f2f45a43f2846970bdc2, type: 3}
+  m_Script: {fileID: 11500000, guid: f2233c998d0d0a94c84d24c310d3589e, type: 3}
   m_Name: Collectable Number
   m_EditorClassIdentifier: 
   remainingCollectables: 254
