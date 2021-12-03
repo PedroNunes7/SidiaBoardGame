@@ -7,7 +7,6 @@ public class PlayerMoveToClick : MonoBehaviour
 {
     NavMeshAgent agent;
     public PlayerInfos player;
-    public GameObject turnPass;
     public MapManagement map;
     public CollectableCounter counter;
     public GameObject battleButton;
@@ -29,7 +28,7 @@ public class PlayerMoveToClick : MonoBehaviour
             {
                 if (hit.transform.gameObject.tag == "Tile")
                 {
-                    if (hit.transform.gameObject.GetComponent<Tile>().moveable && player.moves >= 1)
+                    if (hit.transform.gameObject.GetComponent<Tile>().moveable && player.moves >= 1 && player.turn)
                     {
                         agent.destination = hit.transform.position;
                         player.moves--;
@@ -38,7 +37,7 @@ public class PlayerMoveToClick : MonoBehaviour
                         walkParticle.Play();
                         AssignPosition(hit.transform.gameObject.GetComponent<Tile>());
                     }
-                    if (hit.transform.gameObject.GetComponent<Tile>().attackable)
+                    if (hit.transform.gameObject.GetComponent<Tile>().attackable && player.turn)
                     {
                         if (!player.alreadyAttacked)
                         {
@@ -50,16 +49,21 @@ public class PlayerMoveToClick : MonoBehaviour
             }
                 
         }
-        if (player.moves <= 0)
-        {
-            turnPass.SetActive(true);
-        }
     }
 
     private void AssignPosition(Tile tileComponent)
     {
-        map.player1Tile[0] = tileComponent.row;
-        map.player1Tile[1] = tileComponent.col;
+        if (player.player1)
+        {
+            map.player1Tile[0] = tileComponent.row;
+            map.player1Tile[1] = tileComponent.col;
+        }
+        else if (player.player2)
+        {
+            map.player2Tile[0] = tileComponent.row;
+            map.player2Tile[1] = tileComponent.col;
+        }
+        
 
         foreach (GameObject tile in map.tiles)
         {

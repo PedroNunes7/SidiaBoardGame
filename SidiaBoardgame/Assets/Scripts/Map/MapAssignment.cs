@@ -7,6 +7,7 @@ public class MapAssignment : MonoBehaviour
 {
     public MapManagement map;
     public PlayerInfos player1;
+    public PlayerInfos player2;
     void Start()
     {
         map.player1Tile[0] = 1;
@@ -72,5 +73,7 @@ public class MapAssignment : MonoBehaviour
 
         player1.moves = 3;
         player1.turn = true;
+        player2.moves = 3;
+        player2.turn = false;
     }
 }
