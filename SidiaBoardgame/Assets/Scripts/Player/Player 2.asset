@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea283e9d2b610a046a2caec32435e915, type: 3}
   m_Name: Player 2
   m_EditorClassIdentifier: 
-  nickname: qwdqwd
-  life: 8
-  maxLife: 8
-  damage: 16
-  maxDamage: 3
-  turn: 1
+  nickname: 
+  life: 0
+  maxLife: 0
+  damage: 0
+  maxDamage: 0
+  turn: 0
   dices: 3
-  moves: 11
-  alreadyAttacked: 1
+  moves: 3
+  alreadyAttacked: 0
   player1: 0
   player2: 1
