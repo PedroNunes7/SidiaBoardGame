@@ -109,9 +109,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea13f312235eee14cb8801942af63b39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  counter: {fileID: 11400000, guid: 036c24e42403a204daca88534a2c4083, type: 2}
-  colletables:
-  - {fileID: 7906363062222637631, guid: 6983c6f9df1b550418f1c05cfa75c1ea, type: 3}
-  - {fileID: 7250471002509468344, guid: 5d109509beba05e408e7bcd5a11099d9, type: 3}
-  - {fileID: 5495245687688176179, guid: 149e225d6085de343a37251f20c2ee87, type: 3}
   moveable: 0
+  attackable: 0
+  collectable: 0
+  row: 0
+  col: 0

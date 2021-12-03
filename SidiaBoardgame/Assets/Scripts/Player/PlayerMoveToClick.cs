@@ -12,8 +12,10 @@ public class PlayerMoveToClick : MonoBehaviour
     public CollectableCounter counter;
     public GameObject battleButton;
     public AudioSource walkSound;
+    public ParticleSystem walkParticle;
+    public ParticleSystem battleParticle;
     private void Start()
-    {
+    { 
         agent = GetComponent<NavMeshAgent>();
     }
 
@@ -33,6 +35,7 @@ public class PlayerMoveToClick : MonoBehaviour
                         player.moves--;
                         hit.transform.gameObject.GetComponent<Tile>().collectable = false;
                         walkSound.Play();
+                        walkParticle.Play();
                         AssignPosition(hit.transform.gameObject.GetComponent<Tile>());
                     }
                     if (hit.transform.gameObject.GetComponent<Tile>().attackable)
@@ -64,14 +67,23 @@ public class PlayerMoveToClick : MonoBehaviour
             iterableComponent.moveable = false;
             iterableComponent.attackable = false;
 
-            int[,] attackable = map.AttackableTiles(1);
+            int[,] attackable = map.AttackableTiles(player);
             for (int i = 0; i < 8; i++)
             {
-                if (attackable[i, 0] == iterableComponent.row && attackable[i, 1] == iterableComponent.col && map.player2Tile[0] == iterableComponent.row && map.player2Tile[1] == iterableComponent.col)
-                    iterableComponent.attackable = true;
+                if (player.player1)
+                {
+                    if (attackable[i, 0] == iterableComponent.row && attackable[i, 1] == iterableComponent.col && map.player2Tile[0] == iterableComponent.row && map.player2Tile[1] == iterableComponent.col)
+                        iterableComponent.attackable = true;
+                }
+                if (player.player2)
+                {
+                    if (attackable[i, 0] == iterableComponent.row && attackable[i, 1] == iterableComponent.col && map.player1Tile[0] == iterableComponent.row && map.player1Tile[1] == iterableComponent.col)
+                        iterableComponent.attackable = true;
+                }
+                
             }
 
-            int[,] moveable = map.MoveableTiles(1);
+            int[,] moveable = map.MoveableTiles(player);
             if (!iterableComponent.attackable)
             {
                 for (int i = 0; i < 4; i++)
@@ -91,5 +103,10 @@ public class PlayerMoveToClick : MonoBehaviour
             map.SpawnCollectables();
             counter.remainingCollectables = 254;
         }
+    }
+
+    public void BattleEffect()
+    {
+        battleParticle.Play();
     }
 }

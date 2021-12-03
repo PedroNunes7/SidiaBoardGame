@@ -7,7 +7,8 @@ public class Collectable : MonoBehaviour
     public PlayerInfos player1;
     public PlayerInfos player2;
     public CollectableCounter counter;
-    public AudioClip coinSound;
+    public AudioSource coinSound;
+    public ParticleSystem coinParticle;
 
     [SerializeField]
     bool healthCollectable = false;
@@ -22,7 +23,7 @@ public class Collectable : MonoBehaviour
     bool rare = false;
     [SerializeField]
     bool epic = false;
-    public void OnTriggerStay(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Player")
         {
@@ -71,8 +72,9 @@ public class Collectable : MonoBehaviour
             #endregion
 
             counter.remainingCollectables--;
-            AudioSource.PlayClipAtPoint(coinSound, transform.position);
-            Destroy(this.gameObject);
+            coinSound.Play();
+            coinParticle.Play();
+            Destroy(this.gameObject,1);
         }
     }
 

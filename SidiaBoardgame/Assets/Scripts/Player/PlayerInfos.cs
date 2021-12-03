@@ -4,6 +4,7 @@ using UnityEngine;
 public class PlayerInfos : ScriptableObject
 {
     public string nickname;
+    
     public int life;
     public int maxLife;
     public int damage;
@@ -12,4 +13,6 @@ public class PlayerInfos : ScriptableObject
     public int dices = 3;
     public int moves = 3;
     public bool alreadyAttacked = false;
+    public bool player1;
+    public bool player2;
 }

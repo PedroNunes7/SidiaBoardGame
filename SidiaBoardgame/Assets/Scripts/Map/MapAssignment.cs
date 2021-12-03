@@ -50,14 +50,14 @@ public class MapAssignment : MonoBehaviour
             tileComponent.row = rowNumber;
             tileComponent.col = colNumber;
 
-            int[,] attackable = map.AttackableTiles(1);
+            int[,] attackable = map.AttackableTiles(player1);
             for (int i = 0; i < 8; i++)
             {
                 if (attackable[i, 0] == rowNumber && attackable[i, 1] == colNumber && map.player2Tile[0] == rowNumber && map.player2Tile[1] == colNumber)
                     tileComponent.attackable = true;
             }
 
-            int[,] moveable = map.MoveableTiles(1);
+            int[,] moveable = map.MoveableTiles(player1);
             if (!tileComponent.attackable)
             {
                 for (int i = 0; i < 4; i++)

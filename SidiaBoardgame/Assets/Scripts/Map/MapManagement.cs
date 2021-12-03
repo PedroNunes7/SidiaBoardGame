@@ -25,10 +25,10 @@ public class MapManagement : ScriptableObject
     {
         return (tileComponent.row == player1Tile[0] && tileComponent.col == player1Tile[1]) || (tileComponent.row == player2Tile[0] && tileComponent.col == player2Tile[1]);
     }
-    public int[,] MoveableTiles(int player)
+    public int[,] MoveableTiles(PlayerInfos player)
     {
         int[,] moveable = new int[4,2];
-        if (player == 1)
+        if (player.player1)
         {
             moveable[0, 0] = player1Tile[0] + 1;
             moveable[0, 1] = player1Tile[1];
@@ -39,7 +39,7 @@ public class MapManagement : ScriptableObject
             moveable[3, 0] = player1Tile[0];
             moveable[3, 1] = player1Tile[1] - 1;
         }
-        else
+        else if (player.player2)
         {
             moveable[0, 0] = player2Tile[0] + 1;
             moveable[0, 1] = player2Tile[1];
@@ -54,10 +54,10 @@ public class MapManagement : ScriptableObject
         return moveable;
     }
 
-    public int [,] AttackableTiles(int player)
+    public int [,] AttackableTiles(PlayerInfos player)
     {
         int[,] attackable = new int[8, 2];
-        if (player == 1)
+        if (player.player1)
         {
             attackable[0, 0] = player1Tile[0] + 1;
             attackable[0, 1] = player1Tile[1];
@@ -76,7 +76,7 @@ public class MapManagement : ScriptableObject
             attackable[7, 0] = player1Tile[0] - 1;
             attackable[7, 1] = player1Tile[1] - 1;
         }
-        else
+        else if(player.player2)
         {
             attackable[0, 0] = player2Tile[0] + 1;
             attackable[0, 1] = player2Tile[1];
